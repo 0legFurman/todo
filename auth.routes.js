@@ -13,11 +13,10 @@ router.post('/register', async (req, res) => {
         }
         const user = new User({ login, password })
         await user.save()
-
         return res.status(201).json({ message: "User was created" })
 
     } catch (e) {
-        res.status(500).json({ message: "Something went wrong" })
+        return res.status(500).json({ message: "Something went wrong" })
     }
 })
 
@@ -104,7 +103,6 @@ router.post('/editTask/:userID/:id', async (req, res) => {
 router.post('/deleteTask/:userID/:taskIndex', async (req, res) => {
     try {
         const user = await User.findById(req.params.userID)
-        console.log(req.params.taskIndex)
         const newTasks = user.tasks.filter((task, index) => index != req.params.taskIndex)
         user.tasks = newTasks
         await user.save()

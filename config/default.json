@@ -1,5 +1,5 @@
 {
     "port": 5000,
-    "mongoURL": "mongodb+srv://oleg:P1n0k100@cluster0.axokg.mongodb.net/app?retryWrites=true&w=majority",
+    "mongoURL": "mongodb+srv://Oleg:o2623744@cluster0.wu1lr.mongodb.net/app?retryWrites=true&w=majority",
     "jwtSecret": "oleg"
 }
