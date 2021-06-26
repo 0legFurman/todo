@@ -22,6 +22,7 @@ export const AuthPage = () => {
     const loginHandler = async () => {
         const data = await request('/api/login', 'POST', { ...form })
         auth.login(data.token, data.userID, data.userLogin, data.tasks)
+        setMessage(data.message)
     }
     return (
         <div className={logination.window}>
@@ -32,7 +33,7 @@ export const AuthPage = () => {
                     <input className={logination.input} type="text" value={form.login} onChange={changeHandler} name='login' placeholder="Enter Login"></input>
                     <input className={logination.input} type="text" value={form.password} onChange={changeHandler} name='password' placeholder="Enter Password"></input>
                 </div>
-                {message && <p>{message}</p>}
+                {message && <p className={logination.mess}>{message}</p>}
                 <button className={logination.button1} onClick={registerHandler}>Register</button>
                 <button className={logination.button} onClick={loginHandler}>Login</button>
 

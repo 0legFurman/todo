@@ -62,11 +62,13 @@ router.get('/getTasks/:id', async (req, res) => {
 
 router.post('/addTask/:id', async (req, res) => {
     try {
-        const { name, description } = req.body;
+        const { name, description, status, Deadline } = req.body;
         const user = await User.findById(req.params.id)
         const newTask = {
             name,
             description,
+            status,
+            Deadline,
         }
         if (user.tasks.find(task => task.name === name && task.description === description)) {
             return res.status(400).json({ message: 'Please add task with another name', tasks: user.tasks })
@@ -81,12 +83,14 @@ router.post('/addTask/:id', async (req, res) => {
 
 router.post('/editTask/:userID/:id', async (req, res) => {
     try {
-        const { name, description } = req.body;
+        const { name, description, status, Deadline } = req.body;
         const taskIndex = req.params.id;
         const user = await User.findById(req.params.userID)
         const newTask = {
             name,
             description,
+            status,
+            Deadline,
         }
         const selectedTask = user.tasks.find((task, index) => index === taskIndex)
         if (JSON.stringify(selectedTask) === JSON.stringify(newTask)) {
