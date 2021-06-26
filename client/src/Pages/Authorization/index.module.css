@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
 width: 300px;
-height: 200px;
+height: 220px;
 border-radius: 25px;
 background-color: rgb(184, 66, 66);
 
@@ -42,7 +42,7 @@ background-color: rgb(184, 66, 66);
     border-style: none;
     width: 90px;
     height: 30px;
-    margin-top: 5px;
+    margin-top: 10px;
     border-radius: 25px;
     font-weight: bold;
 }
@@ -51,8 +51,14 @@ background-color: rgb(184, 66, 66);
     border-style: none;
     width: 90px;
     height: 30px;
-    margin-top: 15px;
+    margin-top: 35px;
     border-radius: 25px;
     font-weight: bold;
     color:white;
+}
+.mess{
+position: absolute;
+margin-top: 110px;
+color:white;
+
 }

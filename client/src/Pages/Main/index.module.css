@@ -1,0 +1,197 @@
+.page{
+display:flex;
+flex-direction: column;
+}
+.content{
+    margin:0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: beige;
+    box-shadow: 0px 1px 3px 2px rgb(186, 186, 194);
+}
+.logo{
+width: 80px;
+height: 80px;
+}
+.logcont{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-bottom: 2px;
+ margin-left: 38%;
+position: relative;
+}
+.elem2{
+    margin-left: 35%;
+    margin-top: 24px;
+    position: relative;
+    /* color: rgb(179, 36, 36); */
+    background-color: rgb(214, 9, 9);
+    width: 140px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem1{
+    margin-left: 35px;
+    margin-top: 30px;
+    position: relative; 
+    font-size:0.7cm;
+    font-weight:bolder;
+    color:black;
+}
+.appname{
+    margin-top: 25px;
+    font-size: large;
+    font-weight: bold;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+  
+    
+}
+.link:hover{
+    color: yellowgreen;
+}
+.elem2{
+    margin-left: 35%;
+    margin-top: 24px;
+    position: relative;
+    /* color: rgb(179, 36, 36); */
+    background-color: rgb(214, 9, 9);
+    width: 140px;
+    height: 50px;
+    border-style: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.box{
+    margin-left: 37%;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+    width:350px;
+    height: 290px;
+    background-color: rgb(214, 9, 9);
+    border-radius: 20px;
+    
+    }
+    .field{
+        margin-top: 10px;
+        height: 30px;
+        border-radius: 30px;
+        border-style: none;
+        margin-right: 10px;
+        
+      
+    }
+    .fieldblock{
+    display:flex;
+    flex-direction: row;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    }
+    .article{
+    margin-top: 12px;
+    margin-right: 3px;
+    }
+    .formbutton{
+    width: 140px;
+    height: 50px;
+    font-size: 0.5cm;
+    font-weight: bold;
+    background-color: rgb(255, 177, 8);
+    border-radius: 50px;
+    border-style: none;
+    color: rgb(255, 255, 255);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-right: 26%;
+    }
+
+    .tasks{
+        width:100%;
+    display: grid;
+    grid-template-columns:repeat(5,20%);
+    grid-template-rows:repeat(auto,300px);
+    margin-top: 10px;
+
+    }
+
+    .window{
+    
+        padding: 15px;
+        /* width: 300px;
+        min-height: 200px; */
+        /* max-height: auto; */
+        border-radius: 25px;
+        }
+        
+        
+        
+        
+        .block{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        /* width: 300px;
+        min-height: 200px; */
+        /* max-height: auto; */
+        border-radius: 25px;
+        background-color:rgb(163, 0, 0);
+        color:white;
+        
+        }
+        
+        
+        
+        .row{
+        word-wrap:break-word;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+        }
+        
+        .editbutton{
+        margin-top: 5px;
+        background-color: white;
+        border-style: none;
+        border-radius: 25px;
+        font-weight: bold;
+         /* width: 25%; */
+        }
+        .editbutton:hover{
+            background-color: green;
+            color: white;
+        }
+        
+
+.deletebutton{
+    margin-top: 5px;
+    color: white;
+        background-color: rgb(255, 0, 0);
+        border-style: none;
+        border-radius: 25px;
+        font-weight: bold;
+
+}
+
+.deletebutton:hover{
+    background-color: black;
+    color: white;
+}
