@@ -1,13 +1,15 @@
 .page{
 display:flex;
 flex-direction: column;
+align-items: center;
 }
 .content{
-    margin:0px;
-    padding: 0px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    padding: 10px;
     background-color: beige;
     box-shadow: 0px 1px 3px 2px rgb(186, 186, 194);
 }
@@ -18,34 +20,15 @@ height: 80px;
 .logcont{
     display: flex;
     flex-direction: row;
-    margin-top: 2px;
-    margin-bottom: 2px;
- margin-left: 38%;
-position: relative;
-}
-.elem2{
-    margin-left: 35%;
-    margin-top: 24px;
-    position: relative;
-    /* color: rgb(179, 36, 36); */
-    background-color: rgb(214, 9, 9);
-    width: 140px;
-    height: 50px;
-    border-radius: 50px;
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 .elem1{
-    margin-left: 35px;
-    margin-top: 30px;
-    position: relative; 
+    margin-left: 20px;
     font-size:0.7cm;
     font-weight:bolder;
     color:black;
 }
 .appname{
-    margin-top: 25px;
     font-size: large;
     font-weight: bold;
 }
@@ -61,10 +44,7 @@ position: relative;
     color: yellowgreen;
 }
 .elem2{
-    margin-left: 35%;
-    margin-top: 24px;
-    position: relative;
-    /* color: rgb(179, 36, 36); */
+    margin-right: 20px;
     background-color: rgb(214, 9, 9);
     width: 140px;
     height: 50px;
@@ -79,7 +59,6 @@ position: relative;
 }
 
 .box{
-    margin-left: 37%;
     margin-top: 10px;
     display:flex;
     flex-direction: column;

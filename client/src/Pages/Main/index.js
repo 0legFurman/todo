@@ -9,11 +9,11 @@ export const MainPage = (props) => {
     const { request } = useHttp()
 
     const [form, setForm] = useState({
-     name: '',
-     description: '',
-     status: '',
-     Deadline: '',
-     })
+        name: '',
+        description: '',
+        status: '',
+        Deadline: '',
+    })
     const [editableTask, setEditableTask] = useState(null)
     const [tasks, setTasks] = useState(null)
     const [userName, setUserName] = useState(null)
@@ -54,7 +54,7 @@ export const MainPage = (props) => {
             const data = await request(`/api/addTask/${userID}`, 'POST', { ...form })
             setTasks(data.tasks)
         }
-        setForm({ name: '', description: '', status:'', Deadline:'', })
+        setForm({ name: '', description: '', status: '', Deadline: '', })
     }
 
     const handleEditClick = (task, index) => {
@@ -75,56 +75,56 @@ export const MainPage = (props) => {
     return (
         <div className={navstyle.page}>
             <div className={navstyle.content}>
-  <div className={navstyle.elem1}  >{header}</div>
-    <div className={navstyle.logcont}><img className={navstyle.logo} src={logo} />
-           <div className={navstyle.appname}>ToDO</div>
-       </div>
-       <button className={navstyle.elem2} onClick={logout}>Вийти</button>
-       
- </div>
- <div className={navstyle.box}>
-       <div className={navstyle.fieldblock}>
-           <div className={navstyle.article}>Назва:</div>
-           <input className={navstyle.field} type="text" name='name' onChange={changeHandler} value={form.name} required
-              minlength="4" maxlength="12" size="35" />
-      </div>
-      <div className={navstyle.fieldblock}>
-          <div className={navstyle.article}>Опис:</div>
-          <input className={navstyle.field}  type="text" name='description' onChange={changeHandler} value={form.description}
-              required minlength="4" maxlength="150" size="35" />
-       </div>
-      <div className={navstyle.fieldblock}>
-           <div className={navstyle.article}>Статус:</div>
-           <input className={navstyle.field} type="text" name='status' onChange={changeHandler} value={form.status} required
-               minlength="4" maxlength="20" size="35" />
-       </div>
-       <div className={navstyle.fieldblock}>
-           <div className={navstyle.article}>Дата завершення:</div>
-           <input className={navstyle.field} type="date" name='Deadline' onChange={changeHandler} value={form.Deadline}
-                min="2021-01-01" max="2024-12-31" />
-       </div>
-       <button className={navstyle.formbutton} onClick={handleAddClick}>{editableTask !== null ? 'Зберегти' : 'Добавити'}</button>
+                <div className={navstyle.elem1}  >{header}</div>
+                <div className={navstyle.logcont}><img className={navstyle.logo} src={logo} />
+                    <div className={navstyle.appname}>ToDO</div>
+                </div>
+                <button className={navstyle.elem2} onClick={logout}>Вийти</button>
 
-   </div>
-   <div className={navstyle.tasks}>
-   {!!tasks && !!tasks.length && tasks.map((task, taskIndex) => (
-           <div className={navstyle.window}  >
-           <div className={navstyle.block}  >
-           <div className={navstyle.row}>Назва: {task.name}</div>
-           <div className={navstyle.row}>Опис: {task.description}</div>
-           <div className={navstyle.row}> Статус: {task.status}</div>
-           <div className={navstyle.row}> Дата завершення: {task.Deadline}</div>
-           <button className={navstyle.editbutton} disabled={editableTask} onClick={handleEditClick.bind(this, task, taskIndex)}>Редагувати</button>
-           <button className={navstyle.deletebutton} disabled={editableTask} onClick={handleDeleteClick.bind(this, task.name, taskIndex)}>Видалити</button>
-           </div>
-           </div>
-           ))}
-           </div>
-       
+            </div>
+            <div className={navstyle.box}>
+                <div className={navstyle.fieldblock}>
+                    <div className={navstyle.article}>Назва:</div>
+                    <input className={navstyle.field} type="text" name='name' onChange={changeHandler} value={form.name} required
+                        minlength="4" maxlength="12" size="35" />
+                </div>
+                <div className={navstyle.fieldblock}>
+                    <div className={navstyle.article}>Опис:</div>
+                    <input className={navstyle.field} type="text" name='description' onChange={changeHandler} value={form.description}
+                        required minlength="4" maxlength="150" size="35" />
+                </div>
+                <div className={navstyle.fieldblock}>
+                    <div className={navstyle.article}>Статус:</div>
+                    <input className={navstyle.field} type="text" name='status' onChange={changeHandler} value={form.status} required
+                        minlength="4" maxlength="20" size="35" />
+                </div>
+                <div className={navstyle.fieldblock}>
+                    <div className={navstyle.article}>Дата завершення:</div>
+                    <input className={navstyle.field} type="date" name='Deadline' onChange={changeHandler} value={form.Deadline}
+                        min="2021-01-01" max="2024-12-31" />
+                </div>
+                <button className={navstyle.formbutton} onClick={handleAddClick}>{editableTask !== null ? 'Зберегти' : 'Добавити'}</button>
 
-     </div>
+            </div>
+            <div className={navstyle.tasks}>
+                {!!tasks && !!tasks.length && tasks.map((task, taskIndex) => (
+                    <div className={navstyle.window}  >
+                        <div className={navstyle.block}  >
+                            <div className={navstyle.row}>Назва: {task.name}</div>
+                            <div className={navstyle.row}>Опис: {task.description}</div>
+                            <div className={navstyle.row}> Статус: {task.status}</div>
+                            <div className={navstyle.row}> Дата завершення: {task.Deadline}</div>
+                            <button className={navstyle.editbutton} disabled={editableTask} onClick={handleEditClick.bind(this, task, taskIndex)}>Редагувати</button>
+                            <button className={navstyle.deletebutton} disabled={editableTask} onClick={handleDeleteClick.bind(this, task.name, taskIndex)}>Видалити</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+
+        </div>
     )
-        
+
 }
 {/* <div key={`${task.name}${taskIndex}`}>
 <p>{`Name: ${task.name}`}</p>
@@ -135,5 +135,5 @@ export const MainPage = (props) => {
 <button disabled={editableTask} onClick={handleDeleteClick.bind(this, task.name, taskIndex)}>Delete</button>
 </div> */}
 
- 
+
 
