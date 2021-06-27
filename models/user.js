@@ -11,7 +11,6 @@ const schema = new Schema({
     },
     tasks: [{
         type: Object,
-        unique: true,
     }]
 })
 
